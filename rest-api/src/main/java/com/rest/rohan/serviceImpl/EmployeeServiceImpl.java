@@ -46,7 +46,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@Override
 	public void createEmployee(EmployeeEntity request) throws Exception{
 		List<EmployeeEntity> employeeIds = employeeDao.getAllEmployees();
-		boolean exists = employeeIds.stream().anyMatch(employee -> employee.getEmpid() == request.getEmpid() || employee.getMailid().equals(request.getMailid()));
+		boolean exists = employeeIds.stream().anyMatch(employee -> employee.getEmpid().equals(request.getEmpid()) || employee.getMailid().equals(request.getMailid()));
 		if (exists)
 			throw new ValidationException("The empid/mailid already exists hence cannot create record");
 		else
@@ -90,7 +90,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 	@Override
 	public void updateEmployee(EmployeeEntity employeeEntity) throws Exception {
-		int rowPresent = isRecordExists(employeeEntity.getEmpid());
+		int rowPresent = isRecordExists(Integer.parseInt(employeeEntity.getEmpid()));
 		if (rowPresent==0)
 			throw new ValidationException("Record not present for the given empid (ServiceImpl:Line:"+getLineNumber()+")");
 		else

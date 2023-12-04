@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="rest@localhost" uuid="f7d97eba-6752-4b28-8865-f3e9b78fc275">
+    <data-source source="LOCAL" name="rest" uuid="7b02364e-9578-41f7-9e3c-ac0e34b03428">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/rest</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/emprestapi</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

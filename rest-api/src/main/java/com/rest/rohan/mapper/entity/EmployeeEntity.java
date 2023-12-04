@@ -13,7 +13,7 @@ import lombok.ToString;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class EmployeeEntity {
 	
-	private int empid;
+	private String empid;
 	private String fname;
 	private String lname;
 	private String mailid;
@@ -28,7 +28,7 @@ public class EmployeeEntity {
 		super();
 	}
 
-	public EmployeeEntity(int empid, String fname, String lname, String mailid, String department, String location,
+	public EmployeeEntity(String empid, String fname, String lname, String mailid, String department, String location,
 			BigDecimal salary, String action, Timestamp row_del_tms, Timestamp row_ins_tms) {
 		super();
 		this.empid = empid;
@@ -43,11 +43,11 @@ public class EmployeeEntity {
 		this.row_del_tms = row_del_tms;
 	}
 
-	public int getEmpid() {
+	public String getEmpid() {
 		return empid;
 	}
 
-	public void setEmpid(int empid) {
+	public void setEmpid(String empid) {
 		this.empid = empid;
 	}
 

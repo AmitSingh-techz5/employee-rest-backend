@@ -99,7 +99,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public int createEmployee(EmployeeEntity request) throws Exception {
 		MapSqlParameterSource params = new MapSqlParameterSource();
-		params.addValue("empid", request.getEmpid());
+		params.addValue("empid", Integer.parseInt(request.getEmpid()));
 		params.addValue("fname", request.getFname().toLowerCase());
 		params.addValue("lname", request.getLname().toLowerCase());
 		params.addValue("mailid", request.getMailid().toLowerCase());
@@ -127,7 +127,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public void updateEmployee(EmployeeEntity request) throws Exception {
 		MapSqlParameterSource params = new MapSqlParameterSource();
-		params.addValue("empid", request.getEmpid());
+		params.addValue("empid", Integer.parseInt(request.getEmpid()));
 		params.addValue("fname", request.getFname().toLowerCase());
 		params.addValue("lname", request.getLname().toLowerCase());
 		params.addValue("mailid", request.getMailid().toLowerCase());

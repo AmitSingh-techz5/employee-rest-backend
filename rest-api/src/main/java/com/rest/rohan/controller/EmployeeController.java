@@ -64,7 +64,7 @@ public class EmployeeController {
 		return ResponseEntity.ok(response);
 	}
 
-	@GetMapping (value = "/deleteEmployee/{empid}", produces = "application/json; charset=UTF-8")
+	@DeleteMapping (value = "/deleteEmployee/{empid}", produces = "application/json; charset=UTF-8")
 	public ResponseEntity<EmployeeResponse> deleteEmployee(@PathVariable int empid) throws Exception{
 		EmployeeResponse response = new EmployeeResponse();
 		response.setStatusCode(HttpStatus.OK.value());
